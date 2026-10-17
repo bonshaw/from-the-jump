@@ -1,4 +1,4 @@
-# Take me back… · Right From the Jump
+# Take me back… · From The Jump
 
 A complete single-screen romantic wedding music player for GitHub Pages, featuring your actual first-dance recording and the original photographs.
 

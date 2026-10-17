@@ -168,7 +168,7 @@
   music.addEventListener('timeupdate', () => { updateProgress(); maybeShowNext(); });
   music.addEventListener('play', () => {
     card.classList.add('playing');
-    playButton.setAttribute('aria-label','Pause Right From the Jump');
+    playButton.setAttribute('aria-label','Pause From The Jump');
     hint.textContent = 'Every photograph, a memory';
     if (!Number.isFinite(nextChangeAt)) {
       nextChangeAt = music.currentTime < INTRO_END_SECONDS ? INTRO_END_SECONDS : music.currentTime + 1.6;
@@ -178,13 +178,13 @@
   });
   music.addEventListener('pause', () => {
     card.classList.remove('playing');
-    playButton.setAttribute('aria-label','Play Right From the Jump');
+    playButton.setAttribute('aria-label','Play From The Jump');
     hint.textContent = 'Press play to carry on remembering';
     returnToCover();
   });
   music.addEventListener('ended', () => {
     card.classList.remove('playing');
-    playButton.setAttribute('aria-label','Replay Right From the Jump');
+    playButton.setAttribute('aria-label','Replay From The Jump');
     hint.textContent = 'One beautiful day, forever yours ♡';
     pendingPairPhoto = null;
     nextChangeAt = Infinity;
