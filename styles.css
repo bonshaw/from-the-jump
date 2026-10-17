@@ -80,5 +80,19 @@ h1{margin:5px 0 0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(36
 @media(prefers-reduced-motion:reduce){
  .scene--entering{animation-duration:400ms}.play-button{transition:none}
 }
-/* The resting portrait is intentionally immersive; other photos stay uncropped. */
+/* The resting portrait fills the frame on every screen. */
 .scene[data-photo="photos/cover.jpg"] .scene-foreground{object-fit:cover;object-position:50% 45%}
+
+/* On portrait phones, let most slideshow photos fill the frame like the cover.
+   The originals remain intact: object-fit only controls what is visible here.
+   Four wider group photographs stay uncropped so no guests are cut off. */
+@media (max-width: 620px) and (orientation: portrait){
+ .scene-foreground{object-fit:cover;object-position:50% 50%}
+ .scene[data-photo="photos/cover.jpg"] .scene-foreground{object-position:50% 45%}
+ .scene[data-photo="photos/FB_IMG_1792178838429.jpg"] .scene-foreground,
+ .scene[data-photo="photos/FB_IMG_1792178985038.jpg"] .scene-foreground,
+ .scene[data-photo="photos/FB_IMG_1792178908223.jpg"] .scene-foreground,
+ .scene[data-photo="photos/FB_IMG_1792178854679.jpg"] .scene-foreground{
+  object-fit:contain;
+ }
+}
