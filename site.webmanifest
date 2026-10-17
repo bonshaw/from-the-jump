@@ -1,0 +1,13 @@
+{
+  "name": "Take Me Back · Right From the Jump",
+  "short_name": "Take Me Back",
+  "description": "A wedding day remembered through music and photographs.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4eee6",
+  "theme_color": "#f4eee6",
+  "icons": [
+    {"src":"favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}
+  ]
+}

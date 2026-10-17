@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4eee6">
+  <meta name="description" content="Take me back… Our first dance, and all the memories of the day.">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Take Me Back">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="photos/cover.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <title>Right From the Jump · Mr & Mrs Stifman</title>
+</head>
+<body>
+  <main class="app" aria-label="Wedding first dance keepsake">
+    <header class="masthead">
+      <span class="eyebrow"><span class="small-line"></span> OUR FIRST DANCE <span class="small-line"></span></span>
+      <h1>Michael & Liz</h1>
+      <p class="intro-text">"Take me back..." to our perfect day</p>
+    </header>
+
+    <section class="photo-stage" id="stage" aria-label="Wedding memories slideshow">
+      <div class="scene scene--initial" data-photo="photos/cover.jpg" aria-hidden="true">
+        <img class="scene-backdrop" src="photos/cover.jpg" alt="">
+        <img class="scene-foreground" src="photos/cover.jpg" alt="The happy couple on their wedding day">
+      </div>
+      <div class="stage-tint" aria-hidden="true"></div>
+      <div class="photo-corner photo-corner--top" aria-hidden="true">✧</div>
+      <div class="photo-corner photo-corner--bottom" aria-hidden="true">✧</div>
+      <span class="photo-caption" id="photo-caption">A moment to remember</span>
+      <span class="photo-count" id="photo-count" aria-live="off">29.08.2026</span>
+    </section>
+
+    <section class="music-card" aria-label="Listen to Right From the Jump">
+      <div class="music-card-top">
+        <div class="record-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.35" aria-hidden="true">
+            <circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="12" opacity=".35"/><circle cx="24" cy="24" r="4"/><path d="M24 9a15 15 0 0 1 12.5 6.7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="track-info">
+          <div class="track-title">Right From the Jump</div>
+          <div class="track-subtitle">Our first dance · Original recording</div>
+        </div>
+        <button id="mute-button" class="small-control" aria-label="Mute audio" aria-pressed="false" title="Mute audio" type="button">
+          <svg class="volume-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15 9a5 5 0 0 1 0 6m3-9a9 9 0 0 1 0 12"/></svg>
+          <svg class="volume-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m17 9 5 6m0-6-5 6"/></svg>
+        </button>
+      </div>
+      <div class="music-card-controls">
+        <button class="play-button" id="play-button" type="button" aria-label="Play Right From the Jump">
+          <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5a1 1 0 0 1 1.5-.86l10.5 6.5a1 1 0 0 1 0 1.72l-10.5 6.5A1 1 0 0 1 8 18.5v-13Z"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        </button>
+        <div class="seek-area">
+          <input id="seek" class="seek" type="range" min="0" max="1000" step="1" value="0" aria-label="Song progress" aria-valuetext="0 minutes 0 seconds">
+          <div class="time-labels"><span id="elapsed">0:00</span><span id="duration">--:--</span></div>
+        </div>
+      </div>
+      <p class="hint" id="hint" role="status" aria-live="polite">Press play any time, forever, to relive your first dance</p>
+    </section>
+    <footer class="footer"><span class="footer-line"></span> 29 AUGUST 2026 <span class="footer-heart">♡</span> FOREVER <span class="footer-line"></span></footer>
+  </main>
+  <audio id="music" preload="metadata" src="audio/right-from-the-jump.mp3"></audio>
+  <script src="gallery.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
